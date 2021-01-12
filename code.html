@@ -10,9 +10,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+<link rel="stylesheet" href="js/prism.js">
+    </head>
 
 <body>
+    
 
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #ff993b;">
         <a class="navbar-brand" href="index.html">FizzBuzz</a>
@@ -38,6 +40,53 @@
             </ul>
         </div>
     </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <pre>
+                    <code>
+                        // coding with Bobby's you tube video Traditional Solve using a loop
+function FizzBuzzA(value1, value2){
+    let returnValue = "";
+    for(let loop = 1; loop <=100; loop++){
+        if (loop%value1 == 0 && loop%value2 == 0) {
+            returnValue += 'FizzBuzz  ';
+        } 
+        else if (loop%value1 == 0){
+            returnValue +='Fizz  ';
+        }
+        else if (loop%value2 == 0){
+            returnValue =+ 'Buzz  ';
+        }
+        else{
+            returnValue += loop + ' ';
+        }
+    }
+    return returnValue;
+}
+
+// a better way?
+function FizzBuzzB(value1, value2) {
+    let returnValue = "";
+    let Fizz = false;
+    let Buzz = false
+    
+}
+
+//  This Function DisPLays  the  Solve Functiom Above   it Calls and Uses the Function
+function buzzIt() {
+    let output="";
+    let val1 = document.getElementById('input1').value;
+    let val2 = document.getElementById('input2').value;
+    output = FizzBuzzA(val1, val2);
+     document.getElementById('result').innerHTML = output;
+}
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -53,6 +102,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="css/prism.css"></script>
+    <script src="js/prism.js"></script>
 </body>
 
 </html>
+

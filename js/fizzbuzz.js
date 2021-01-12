@@ -4,7 +4,7 @@ function FizzBuzzA(value1, value2){
     for(let loop = 1; loop <=100; loop++){
         if (loop%value1 == 0 && loop%value2 == 0) {
             returnValue += 'FizzBuzz  ';
-        }
+        } 
         else if (loop%value1 == 0){
             returnValue +='Fizz  ';
         }
@@ -18,12 +18,41 @@ function FizzBuzzA(value1, value2){
     return returnValue;
 }
 
+// a better way?
+function FizzBuzzB(value1, value2) {
+    let returnValue = "";
+    let Fizz = false;
+    let Buzz = false;
+    for(let loop = 1 ; loop <= 100; loop ++ ){
+        Fizz = loop % value1 == 0;
+        Buzz = loop % value2 == 0;
+        switch(true){
+            case Fizz && Buzz :{
+                returnValue += 'FizzBuzz ';
+                break;
+            }
+            case Fizz :{
+                returnValue += 'Fizz ';
+                break;
+            }
+            case Buzz :{
+                returnValue += 'Buzz ';
+                break;
+            }
+            default : {
+                returnValue += loop + ' ';
+            }
+        }
+    }
+    return returnValue;
+}
+
 //  This Function DisPLays  the  Solve Functiom Above   it Calls and Uses the Function
 function buzzIt() {
     let output="";
     let val1 = document.getElementById('input1').value;
     let val2 = document.getElementById('input2').value;
-    output = FizzBuzzA(val1, val2);
+    output = FizzBuzzB(val1, val2);
      document.getElementById('result').innerHTML = output;
 }
 
