@@ -19,7 +19,7 @@ function FizzBuzzA(value1, value2){
 }
 
 // a better way?
-function FizzBuzzB(value1, value2) {
+ function FizzBuzzB(value1, value2) {
     let returnValue = "";
     let Fizz = false;
     let Buzz = false;
@@ -46,13 +46,30 @@ function FizzBuzzB(value1, value2) {
     }
     return returnValue;
 }
+//  method number # not traditional
+function FizzBuzzC(value1,value2) {
+    let returnValue = "";
+    for (let loop = 1; loop <= 100; loop++){
+        returnValue += ((loop % value1 == 0 ? 'Fizz' : '') + (loop % value2 == 0 ? 'Buzz' : '') || loop) + ' ';
+    }
+    return returnValue;
+}
+
+// Meta Strat
+function FizzBuzzD(value1,value2) {
+    let returnArray= [];
+    for(let loop = 1; loop <= 100; loop++){
+        returnArray[loop] = ((loop % val1 == 0 ? 'Fizz' : '') + (loop % val2 == 0 ? 'Buzz' : '') || loop);
+    }
+    return returnArray;
+}
 
 //  This Function DisPLays  the  Solve Functiom Above   it Calls and Uses the Function
 function buzzIt() {
     let output="";
     let val1 = document.getElementById('input1').value;
     let val2 = document.getElementById('input2').value;
-    output = FizzBuzzB(val1, val2);
+    output = FizzBuzzC(val1, val2);
      document.getElementById('result').innerHTML = output;
 }
 
