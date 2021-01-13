@@ -45,6 +45,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <button data-clipboard-action ="copy" data-clipboard-target="code">Copy</button>
                 <pre>
     <code class="language-javascript">
         // FUNCTION #1  coding with Bobby's you tube video Traditional Solve using a loop
@@ -190,6 +191,19 @@
     </script>
     
     <script src="js/prism.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script>
+        var btns = document.querySelectorAll('button');
+        var clipboard = new ClipboardJS(btns);
+    
+        clipboard.on('success', function(e) {
+            console.log(e);
+        });
+    
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+        </script>
 </body>
 
 </html>
