@@ -1,4 +1,4 @@
-// coding with Bobby's you tube video Traditional Solve using a loop
+// FUNCTION #1  coding with Bobby's you tube video Traditional Solve using a loop
 function FizzBuzzA(value1, value2){
     let returnValue = "";
     for(let loop = 1; loop <=100; loop++){
@@ -18,7 +18,7 @@ function FizzBuzzA(value1, value2){
     return returnValue;
 }
 
-// a better way?
+// FUNCTION #2   a better way?
  function FizzBuzzB(value1, value2) {
     let returnValue = "";
     let Fizz = false;
@@ -46,7 +46,7 @@ function FizzBuzzA(value1, value2){
     }
     return returnValue;
 }
-//  method number # not traditional
+// FUNCTION #3 method number 3 not traditional
 function FizzBuzzC(value1,value2) {
     let returnValue = "";
     for (let loop = 1; loop <= 100; loop++){
@@ -55,14 +55,14 @@ function FizzBuzzC(value1,value2) {
     return returnValue;
 }
 
-// Meta Strat
-function FizzBuzzD(value1,value2) {
-    let returnArray= [];
-    for(let loop = 1; loop <= 100; loop++){
-        returnArray[loop] = ((loop % val1 == 0 ? 'Fizz' : '') + (loop % val2 == 0 ? 'Buzz' : '') || loop);
-    }
-    return returnArray;
-}
+// Meta Strat----- I will revist this function @ a later time!!!!!
+// function FizzBuzzD(value1,value2) {
+//     let returnArray= [];
+//     for(let loop = 1; loop <= 100; loop++){
+//         returnArray[loop] = ((loop % val1 == 0 ? 'Fizz' : '') + (loop % val2 == 0 ? 'Buzz' : '') || loop);
+//     }
+//     return returnArray;
+// }
 
 //  This Function DisPLays  the  Solve Functiom Above   it Calls and Uses the Function
 function buzzIt() {
@@ -75,6 +75,24 @@ function buzzIt() {
 
 
 
+// this function is the extra credit function
+function FizzBuzzX(value3,value4) {
+    let returnValueX = "";
+    for (let loopX = 1; loopX <= 100; loopX++){
+        returnValueX += ((loopX % value3 == 0 ? 'Fizz' : '') + (loopX % value4 == 0 ? 'Buzz' : '') || loopX) + ' ';
+    }
+    return returnValueX;
+}
+
+
+//This function displays the Extra Credit results----
+function buzzItX() {
+    let outputX="";
+    let val3 = document.getElementById('input3').value;
+    let val4 = document.getElementById('input4').value;
+    outputX = FizzBuzzX(val3, val4);
+     document.getElementById('resultX').innerHTML = outputX;
+}
 
 
 // --------Drew's code along
