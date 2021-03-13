@@ -99,6 +99,7 @@ function buzzItX() {
      document.getElementById('resultX').innerHTML = outputX;
 }
 
+//This function resets the display table
 document.getElementById("btnClear2").addEventListener("click", function(){
     document.getElementById("input3").value = "";
     document.getElementById("input4").value = "";
