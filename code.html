@@ -1,190 +1,181 @@
-<!doctype html>
+<!--
+=========================================================
+* Argon Design System - v1.2.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Steve Muir">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png">
+  <title>
+    Steve Muir - Fizz Buzz
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link href="assets/css/font-awesome.css" rel="stylesheet" />
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files-->
+  <link href="assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
+  <link href="assets/css/custom.css" rel="stylesheet" />
+  <link href="css/prism.css" rel="stylesheet" />
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
-    <link rel="stylesheet" href="css/prism.css">
-    </head>
-
-<body>
-    
-
-    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #ff993b;">
-        <a class="navbar-brand" href="index.html">FizzBuzz</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="solve.html">Solve </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="code.html">Code <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/stevemuir6" target="_blank">GitHub</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://steveportfolio.netlify.app" target="_blank">Portfolio</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
+<body class="landing-page">
+  <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light py-2">       
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <button data-clipboard-action ="copy" data-clipboard-target="code">Copy</button>
-                <!-- <button data-src="js/fizzbuzz.js" data-download-link>Download</button> file does NOT download YET!!!!!!! -->
-                <pre>
-    <code class="language-javascript">
-        // FUNCTION #1  
-        function FizzBuzzA(value1, value2){
-            let returnValue = "";
-            for(let loop = 1; loop <=100; loop++){
-                if (loop%value1 == 0 && loop%value2 == 0) {
-                    returnValue += 'FizzBuzz  ';
-                } 
-                else if (loop%value1 == 0){
-                    returnValue +='Fizz  ';
-                }
-                else if (loop%value2 == 0){
-                    returnValue =+ 'Buzz  ';
-                }
-                else{
-                    returnValue += loop + ' ';
-                }
-            }
-            return returnValue;
-        }
+      <a class="navbar-brand mr-lg-5" href="../index.html">
+        Fizz Buzz
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar_global">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="solve.html">Solve</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="code.html">Code</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://smuir-portfolio.netlify.app">Portfolio</a>
+            </li>
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+              <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="https://twitter.com/SteveMu80381990" target="_blank" data-toggle="tooltip" title="Follow me on Twitter">
+                  <i class="fa fa-twitter-square"></i>
+                  <span class="nav-link-inner--text d-lg-none">Twitter</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="https://github.com/stevemuir6" target="_blank" data-toggle="tooltip" title="Star me on Github">
+                  <i class="fa fa-github"></i>
+                  <span class="nav-link-inner--text d-lg-none">Github</span>
+                </a>
+              </li>
+              
+            </ul>           
+        </ul>     
+      </div>
+    </div>   
+  </nav>
+  <!-- End Navbar -->
+
+  <div class="wrapper">
+    <div class="section section-hero section-shaped">
+      <div class="shape shape-style-4 shape-default">
         
-        // FUNCTION #2   a better way?
-         function FizzBuzzB(value1, value2) {
-            let returnValue = "";
-            let Fizz = false;
-            let Buzz = false;
-            for(let loop = 1 ; loop <= 100; loop ++ ){
-                Fizz = loop % value1 == 0;
-                Buzz = loop % value2 == 0;
-                switch(true){
-                    case Fizz && Buzz :{
-                        returnValue += 'FizzBuzz ';
-                        break;
-                    }
-                    case Fizz :{
-                        returnValue += 'Fizz ';
-                        break;
-                    }
-                    case Buzz :{
-                        returnValue += 'Buzz ';
-                        break;
-                    }
-                    default : {
-                        returnValue += loop + ' ';
-                    }
-                }
-            }
-            return returnValue;
-        }
-        // FUNCTION #3 method number 3 not traditional
-        function FizzBuzzC(value1,value2) {
-            let returnValue = "";
-            for (let loop = 1; loop <= 100; loop++){
-                returnValue += ((loop % value1 == 0 ? 'Fizz' : '') + (loop % value2 == 0 ? 'Buzz' : '') || loop) + ' ';
-            }
-            return returnValue;
-        }
-        
-        // Meta Strat----- I will revist this function @ a later time!!!!!
-        // function FizzBuzzD(value1,value2) {
-        //     let returnArray= [];
-        //     for(let loop = 1; loop <= 100; loop++){
-        //         returnArray[loop] = ((loop % val1 == 0 ? 'Fizz' : '') + (loop % val2 == 0 ? 'Buzz' : '') || loop);
-        //     }
-        //     return returnArray;
-        // }
-        
-        //  This Function DisPLays  the  Solve Functiom Above   it Calls and Uses the Function
-        function buzzIt() {
-            let output="";
-            let val1 = document.getElementById('input1').value;
-            let val2 = document.getElementById('input2').value;
-            output = FizzBuzzC(val1, val2);
-             document.getElementById('result').innerHTML = output;
-        }
-        
-        
-        
-        // this function is the extra credit function
-        function FizzBuzzX(value3,value4) {
-            let returnValueX = "";
-            for (let loopX = 1; loopX <= 100; loopX++){
-                returnValueX += ((loopX % value3 == 0 ? 'Fizz' : '') + (loopX % value4 == 0 ? 'Buzz' : '') || loopX) + ' ';
-            }
-            return returnValueX;
-        }
-        
-        
-        //This function displays the Extra Credit results----
-        function buzzItX() {
-            let outputX="";
-            let val3 = document.getElementById('input3').value;
-            let val4 = document.getElementById('input4').value;
-            outputX = FizzBuzzX(val3, val4);
-             document.getElementById('resultX').innerHTML = outputX;
-        }
-        
-        
-        
-                    </code>
-                </pre>
+        <span class="span-50"></span>
+        <span class="span-50"></span>
+        <span class="span-75"></span>
+        <span class="span-100"></span>
+        <span class="span-75"></span>
+        <span class="span-50"></span>
+        <span class="span-100"></span>     
+        <span class="span-100"></span>
+      </div>
+      <div class="page-header">
+        <div class="container shape-container d-flex align-items-center py-lg">
+          <div class="col px-0">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-lg-6 text-center">
+                
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
     </div>
-
-
-
-
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    
-    <script src="js/prism.js"></script>
-    <script src="js/clipboard.min.js"></script>
-    <script>
-        var btns = document.querySelectorAll('button');
-        var clipboard = new ClipboardJS(btns);
-    
-        clipboard.on('success', function(e) {
-            console.log(e);
-        });
-    
-        clipboard.on('error', function(e) {
-            console.log(e);
-        });
-        </script>
+   
+    <br /><br />
+    <footer class="footer">
+      <div class="container">
+        <div class="row row-grid align-items-center mb-5">
+          <div class="col-lg-6">
+            <h3 class="text-primary font-weight-light mb-2">Thank you for visiting my Mini-Site!</h3>
+            <h4 class="mb-0 font-weight-light">Get in touch with me on any of these platforms!</h4>
+          </div>
+          <div class="col-lg-6 text-lg-center btn-wrapper">
+            <button target="_blank" href="https://twitter.com/SteveMu80381990" rel="nofollow" class="btn btn-icon-only btn-twitter rounded-circle" data-toggle="tooltip" data-original-title="Follow me">
+              <span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+            </button>
+            <button target="_blank" href="https://www.linkedin.com/in/steve-muir-5372771bb/" rel="nofollow" class="btn-icon-only rounded-circle btn btn-facebook" data-toggle="tooltip" data-original-title="Get in touch">
+              <span class="btn-inner--icon"><i class="fab fa-linkedin-square"></i></span>
+            </button>
+            <button target="_blank" href="https://github.com/stevemuir6" rel="nofollow" class="btn btn-icon-only btn-github rounded-circle" data-toggle="tooltip" data-original-title="Star on Github">
+              <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
+            </button>
+          </div>
+        </div>
+        <hr>
+        <div class="row align-items-center justify-content-md-between">
+          <div class="col-md-6">
+            <div class="copyright">
+              &copy; 2020 <a href="https://smuir-portfolio.netlify.app" target="_blank">Steve Muir</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+  <script src="assets/js/plugins/bootstrap-switch.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+  <script src="assets/js/plugins/moment.min.js"></script>
+  <script src="assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
+  <script src="assets/js/plugins/bootstrap-datepicker.min.js"></script>
+  <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src="assets/js/argon-design-system.min.js?v=1.2.2" type="text/javascript"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <!-- <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-design-system-pro"
+      });
+  </script> -->
 </body>
 
+</html>      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/fizzbuzz.js"></script>  
+    <script src="js/prism.js"></script>
+</body>
 </html>
-
-
-                        

@@ -72,6 +72,11 @@ function buzzIt() {
     output = FizzBuzzC(val1, val2);
      document.getElementById('result').innerHTML = output;
 }
+document.getElementById("btnClear").addEventListener("click", function(){
+    document.getElementById("input1").value = "";
+    document.getElementById("input2").value = "";
+    document.getElementById("result").innerText = "";
+});
 
 
 
@@ -94,6 +99,11 @@ function buzzItX() {
      document.getElementById('resultX').innerHTML = outputX;
 }
 
+document.getElementById("btnClear2").addEventListener("click", function(){
+    document.getElementById("input3").value = "";
+    document.getElementById("input4").value = "";
+    document.getElementById("resultX").innerText = "";
+});
 
 // --------Drew's code along
 // This uses an anonymous function to call a named function
