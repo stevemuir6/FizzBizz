@@ -50,7 +50,7 @@ function FizzBuzzA(value1, value2){
 function FizzBuzzC(value1,value2) {
     let returnValue = "";
     for (let loop = 1; loop <= 100; loop++){
-        returnValue += ((loop % value1 == 0 ? 'Fizz' : '') + (loop % value2 == 0 ? 'Buzz' : '') || loop) + ' ';
+        returnValue += ((loop % value1 == 0 ? '<b>Fizz</b>' : '') + (loop % value2 == 0 ? '<b>Buzz</b>' : '') || loop) + ' ';
     }
     return returnValue;
 }
@@ -64,7 +64,7 @@ function FizzBuzzC(value1,value2) {
 //     return returnArray;
 // }
 
-//  This Function DisPLays  the  Solve Functiom Above   it Calls and Uses the Function
+//  This Function DisPLays  the  Solve Functiom Above  
 function buzzIt() {
     let output="";
     let val1 = document.getElementById('input1').value;
@@ -72,6 +72,8 @@ function buzzIt() {
     output = FizzBuzzC(val1, val2);
      document.getElementById('result').innerHTML = output;
 }
+
+//This function resets the first display 
 document.getElementById("btnClear").addEventListener("click", function(){
     document.getElementById("input1").value = "";
     document.getElementById("input2").value = "";
@@ -80,17 +82,17 @@ document.getElementById("btnClear").addEventListener("click", function(){
 
 
 
-// this function is the extra credit function
+// this function is the 2nd method
 function FizzBuzzX(value3,value4) {
     let returnValueX = "";
     for (let loopX = 1; loopX <= 100; loopX++){
-        returnValueX += ((loopX % value3 == 0 ? 'Fizz' : '') + (loopX % value4 == 0 ? 'Buzz' : '') || loopX) + ' ';
+        returnValueX += ((loopX % value3 == 0 ? '<b>Fizz</b>' : '') + (loopX % value4 == 0 ? '<b>Buzz</b>' : '') || loopX) + ' ';
     }
     return returnValueX;
 }
 
 
-//This function displays the Extra Credit results----
+//This function displays the 2nd method
 function buzzItX() {
     let outputX="";
     let val3 = document.getElementById('input3').value;
@@ -99,7 +101,7 @@ function buzzItX() {
      document.getElementById('resultX').innerHTML = outputX;
 }
 
-//This function resets the display table
+//This function resets the display of the 2nd method
 document.getElementById("btnClear2").addEventListener("click", function(){
     document.getElementById("input3").value = "";
     document.getElementById("input4").value = "";

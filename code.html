@@ -35,7 +35,7 @@ Coded by www.creative-tim.com
   <!-- CSS Files-->
   <link href="assets/css/argon-design-system.css?v=1.2.2" rel="stylesheet" />
   <link href="assets/css/custom.css" rel="stylesheet" />
-  <link href="css/prism.css" rel="stylesheet" />
+  <link href="assets/css/prism.css" rel="stylesheet" />
 </head>
 
 <body class="landing-page">
@@ -95,13 +95,53 @@ Coded by www.creative-tim.com
       </div>
       <div class="page-header">
         <div class="container shape-container d-flex align-items-center py-lg">
-          <div class="col px-0">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-lg-6 text-center">
-                
-              </div>
-            </div>
-          </div>
+          <pre data-src="js/fizzbuzz.js" data-download-link data-download-link-label="Download this file"><code class="language-js">
+            function FizzBuzzC(value1,value2) {
+            let returnValue = "";
+            for (let loop = 1; loop <= 100; loop++){
+                returnValue += ((loop % value1 == 0 ? '<b>Fizz</b>' : '') + 
+                (loop % value2 == 0 ? '<b>Buzz</b>' : '') || loop) + ' ';
+            }
+            return returnValue;
+            }
+            //  This Function DisPLays  the  Solve Functiom Above  
+            function buzzIt() {
+                let output="";
+                let val1 = document.getElementById('input1').value;
+                let val2 = document.getElementById('input2').value;
+                output = FizzBuzzC(val1, val2);
+                document.getElementById('result').innerHTML = output;
+            }
+            //This function resets the first display 
+            document.getElementById("btnClear").addEventListener("click", function(){
+                document.getElementById("input1").value = "";
+                document.getElementById("input2").value = "";
+                document.getElementById("result").innerText = "";
+            });
+            // this function is the 2nd method
+            function FizzBuzzX(value3,value4) {
+                let returnValueX = "";
+                for (let loopX = 1; loopX <= 100; loopX++){
+                    returnValueX += ((loopX % value3 == 0 ? '<b>Fizz</b>' : '') + 
+                    (loopX % value4 == 0 ? '<b>Buzz</b>' : '') || loopX) + ' ';
+                }
+                return returnValueX;
+            }
+            //This function displays the 2nd method
+            function buzzItX() {
+                let outputX="";
+                let val3 = document.getElementById('input3').value;
+                let val4 = document.getElementById('input4').value;
+                outputX = FizzBuzzX(val3, val4);
+                document.getElementById('resultX').innerHTML = outputX;
+            }
+            //This function resets the display of the 2nd method
+            document.getElementById("btnClear2").addEventListener("click", function(){
+                document.getElementById("input3").value = "";
+                document.getElementById("input4").value = "";
+                document.getElementById("resultX").innerText = "";
+            });
+          </code></pre>
         </div>
       </div>
       <div class="separator separator-bottom separator-skew zindex-100">
@@ -175,7 +215,7 @@ Coded by www.creative-tim.com
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/fizzbuzz.js"></script>  
-    <script src="js/prism.js"></script>
+    <script src="js/fizzbuzz.js"></script>
+    <script src="assets/js/prism.js"></script>
 </body>
 </html>
